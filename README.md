@@ -1,0 +1,42 @@
+## Usage
+
+1. **Clone**
+
+```bash
+git clone https://github.com/chiefheston/thm-duplications-migration.git
+cd thm-duplications-migration
+```
+
+2. **Fill .env**
+
+```bash
+cp .env.example .env
+```
+
+3. **Run migration**
+
+```bash
+make migration
+```
+
+---
+
+## Useful commands
+
+Collect logs from container
+
+```bash
+make logs
+```
+
+Stop container
+
+```bash
+make stop
+```
+
+Remove container
+
+```bash
+make remove
+```
