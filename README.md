@@ -3,7 +3,7 @@
 1. **Clone**
 
 ```bash
-git clone https://github.com/chiefheston/thm-duplications-migration.git
+git clone https://github.com/chiefheston/thm-duplication-migration.git
 cd thm-duplications-migration
 ```
 
