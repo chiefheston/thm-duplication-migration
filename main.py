@@ -135,6 +135,7 @@ class Migration:
             select thm.id
             from totum.transaction_history_mobile as thm
             where thm.id > :last_id
+              and thm.__created_at__ <= now() - interval '5 minutes'
               and not exists (select 1
                               from totum.deposit as d
                               where d.payment_system_id ->> 'v' = thm.payment_system ->> 'v'
