@@ -79,6 +79,7 @@ class Migration:
                         "No more candidates. Cleanup finished. last_id=%s",
                         result.last_id,
                     )
+                    self._drop_checkpoint_table()
                     return
 
                 retry_count = 0
@@ -115,6 +116,11 @@ class Migration:
         with self._engine.begin() as connection:
             connection.execute(create_table_query)
             connection.execute(insert_init_checkpoint_query)
+
+    def _drop_checkpoint_table(self):
+        query = sa.text(f"drop table if exists totum.{CHECKPOINT_TABLE}")
+        with self._engine.begin() as connection:
+            connection.execute(query)
 
     def _process_batch(self) -> BatchResult:
         metadata = sa.MetaData()
