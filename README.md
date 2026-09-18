@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/chiefheston/thm-duplication-migration.git
-cd thm-duplications-migration
+cd thm-duplication-migration
 ```
 
 2. **Fill .env**
