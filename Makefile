@@ -20,3 +20,4 @@ stop:
 
 remove:
 	docker rm $(MIGRATION_CONTAINER)
+	docker image rm $(MIGRATION_CONTAINER)

@@ -35,7 +35,7 @@ Stop container
 make stop
 ```
 
-Remove container
+Remove container and image
 
 ```bash
 make remove
